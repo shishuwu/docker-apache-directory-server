@@ -1,7 +1,9 @@
 FROM openjdk:7
 
+COPY apacheds-2.0.0-M17.zip  /usr/local/apacheds-2.0.0-M17.zip
+
 RUN cd /usr/local && \
-    wget http://archive.apache.org/dist/directory/apacheds/dist/2.0.0-M17/apacheds-2.0.0-M17.zip && \
+    # wget http://archive.apache.org/dist/directory/apacheds/dist/2.0.0-M17/apacheds-2.0.0-M17.zip && \
     unzip apacheds-2.0.0-M17.zip && \
     chmod a+x apacheds-2.0.0-M17/bin/apacheds.sh && \
     rm apacheds-2.0.0-M17.zip && \
